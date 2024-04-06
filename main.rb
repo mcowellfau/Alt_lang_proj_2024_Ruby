@@ -29,31 +29,45 @@ end
 
 def clean_data(value, column_name)
   case column_name
-  when 'oem', 'model','launch_announced' 'launch_status', 'body_dimensions','body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os'
-    # For most fields, if the value is nil or an empty string, replace it with nil.
+  when 'oem', 'model', 'body_dimensions', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os'
+    # For most fields, replace nil or empty string with nil.
     value.nil? || value.strip.empty? ? nil : value
   when 'launch_announced'
-    # Use regex to find a 4-digit number within the string. If found, return it as an integer.
+    # Use regex to find a 4-digit number. If found, return it as an integer.
     if match = value.to_s.match(/\b(\d{4})\b/)
       match[1].to_i
     else
-      # If no valid year is found, return nil.
+      # Return nil if no valid year is found.
       nil
     end
   when 'launch_status'
-
+    # Keep 'Discontinued' or 'Cancelled' as is, otherwise try to find a 4-digit year.
+    if ['Discontinued', 'Cancelled'].include?(value)
+      value
+    else
+      if match = value.to_s.match(/\b(\d{4})\b/)
+        match[1]  # Keep as a string to maintain uniformity in data type.
+      else
+        # Return nil if the value is neither a valid year nor one of the specified strings.
+        nil
+      end
+    end
   when 'body_weight'
-    # Attempt to convert body_weight to a float. If it fails or the value is empty, return nil.
-    begin
-      Float(value)
-    rescue
+    # Use regex to extract the number before 'g' and convert it to a float.
+    if match = value.to_s.match(/(\d+)\s*g/)
+      match[1].to_f
+    else
+      # Return nil if no valid number is found before 'g'.
       nil
     end
   else
-    # By default, return the value as it is (You might not need this else block as all cases are covered)
+    # By default, return the value as it is.
     value
   end
 end
+
+
+
 
 
 # Reads data from 'cells.csv', assuming headers are present,
