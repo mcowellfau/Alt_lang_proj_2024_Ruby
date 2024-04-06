@@ -103,7 +103,7 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
   Cell.new(
     clean_data(row['oem'], 'oem'),
     clean_data(row['model'], 'model'),
-    clean_data(row['launch_announced'], 'launch_announced'), # Now returns integer year or nil
+    clean_data(row['launch_announced'], 'launch_announced'), 
     clean_data(row['launch_status'], 'launch_status'),
     clean_data(row['body_dimensions'], 'body_dimensions'),
     clean_data(row['body_weight'], 'body_weight').to_f,
@@ -115,4 +115,32 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
     clean_data(row['platform_os'], 'platform_os')
   )
 end
+
+# New csv file name
+new_csv_file = 'cleaned_cells.csv'
+
+# Open a new CSV file for writing
+CSV.open(new_csv_file, 'w') do |csv|
+  # Write the header row to the new CSV
+  csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os']
+
+  # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
+  csv_data.each do |cell|
+    csv << [
+      cell.oem,
+      cell.model,
+      cell.launch_announced,
+      cell.launch_status,
+      cell.body_dimensions,
+      cell.body_weight,
+      cell.body_sim,
+      cell.display_type,
+      cell.display_size,
+      cell.display_resolution,
+      cell.feature_sensors,
+      cell.platform_os
+    ]
+  end
+end
+
 
