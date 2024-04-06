@@ -29,22 +29,32 @@ end
 
 def clean_data(value, column_name)
   case column_name
-  when 'oem'
-    # Check if the OEM value is empty; replace it with nil if so.
-    value.nil? || value.strip.empty? ? nil : value
-  when 'model'
+  when 'oem', 'model','launch_announced' 'launch_status', 'body_dimensions','body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os'
+    # For most fields, if the value is nil or an empty string, replace it with nil.
     value.nil? || value.strip.empty? ? nil : value
   when 'launch_announced'
+    # Use regex to find a 4-digit number within the string. If found, return it as an integer.
+    if match = value.to_s.match(/\b(\d{4})\b/)
+      match[1].to_i
+    else
+      # If no valid year is found, return nil.
+      nil
+    end
   when 'launch_status'
-  when 'body_dimensions'
+
   when 'body_weight'
-  when 'body_sim'
-  when 'display_type'
-  when 'display_size'
-  when 'display_resolution'
-  when 'feature_sensors'
-  when 'platform_os'
+    # Attempt to convert body_weight to a float. If it fails or the value is empty, return nil.
+    begin
+      Float(value)
+    rescue
+      nil
+    end
+  else
+    # By default, return the value as it is (You might not need this else block as all cases are covered)
+    value
+  end
 end
+
 
 # Reads data from 'cells.csv', assuming headers are present,
 # and creates an array of Cell instances, one for each row in the CSV.
