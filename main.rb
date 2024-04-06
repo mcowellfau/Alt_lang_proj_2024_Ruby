@@ -1,14 +1,14 @@
-# Requires the Ruby CSV library for parsing CSV files.
+# Requires the Ruby CSV library for parsing CSV files
 require 'csv'
 
-# Defines a class named Cell to represent a cell phone with various attributes.
+# Defines a class named Cell to represent a cell phone with various attributes
 class Cell
-    # Creates getter and setter methods for each cell phone attribute using the correct naming convention.
+    # Creates getter and setter methods for each cell phone attribute using the correct naming convention
     attr_accessor :oem, :model, :launch_announced, :launch_status,
                   :body_dimensions, :body_weight, :body_sim, :display_type,
                   :display_size, :display_resolution, :feature_sensors, :platform_os
 
-    # Initializes a new instance of the Cell class, setting the attributes with the values provided.
+    # Initializes a new instance of the Cell class, setting the attributes with the values provided
     def initialize(oem, model, launch_announced, launch_status,
                    body_dimensions, body_weight, body_sim, display_type,
                    display_size, display_resolution, feature_sensors, platform_os)
@@ -29,7 +29,7 @@ end
 
 def clean_data(value, column_name)
   case column_name
-  when 'oem', 'model', 'body_dimensions', 'display_type', 'feature_sensors', 'platform_os', 'launch_announced', 'launch_status', 'body_weight', 'body_sim', 'display_resolution'
+  when 'oem', 'model', 'body_dimensions', 'display_type', 'display_resolution'
     # For most fields, replace nil or empty string with nil
     value.nil? || value.strip.empty? ? nil : value
   when 'launch_announced'
@@ -65,7 +65,7 @@ def clean_data(value, column_name)
     if value == "No" || value == "Yes"
       nil
     else
-      value  # Assuming other strings are valid.
+      value  # Assuming other strings are valid
     end
   when 'display_size'
     # Use regex to find an integer or a float followed by the word "inches"
@@ -75,16 +75,27 @@ def clean_data(value, column_name)
       # Return nil if the format is not as expected
       nil
     end
+  when 'feature_sensors'
+    # Check if the value is purely numeric
+    if value.to_s.match(/\A\d+(\.\d+)?\z/)
+      nil  # Return nil if the value is purely numeric
+    else
+      value  # Valid data includes strings of letters or numbers, including "V1"
+    end
+  when 'platform_os'
+    # Shorten to everything up to the first comma or the entire string if there's no comma
+    # Also, replace purely numeric values with nil
+    if value.to_s.match(/\A\d+(\.\d+)?\z/)
+      nil
+    else
+      shortened_value = value.to_s.split(',', 2).first
+      shortened_value.nil? || shortened_value.strip.empty? ? nil : shortened_value.strip
+    end
   else
     # By default, return the value as it is
     value
   end
 end
-
-
-
-
-
 
 # Reads data from 'cells.csv', assuming headers are present,
 # and creates an array of Cell instances, one for each row in the CSV.
