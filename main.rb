@@ -29,7 +29,7 @@ end
 
 def clean_data(value, column_name)
   case column_name
-  when 'oem', 'model', 'body_dimensions', 'display_type', 'feature_sensors', 'platform_os', 'launch_announced', 'launch_status', 'body_weight', 'body_sim'
+  when 'oem', 'model', 'body_dimensions', 'display_type', 'feature_sensors', 'platform_os', 'launch_announced', 'launch_status', 'body_weight', 'body_sim', 'display_resolution'
     # For most fields, replace nil or empty string with nil
     value.nil? || value.strip.empty? ? nil : value
   when 'launch_announced'
