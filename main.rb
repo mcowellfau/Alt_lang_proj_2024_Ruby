@@ -29,42 +29,58 @@ end
 
 def clean_data(value, column_name)
   case column_name
-  when 'oem', 'model', 'body_dimensions', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os'
-    # For most fields, replace nil or empty string with nil.
+  when 'oem', 'model', 'body_dimensions', 'display_type', 'feature_sensors', 'platform_os', 'launch_announced', 'launch_status', 'body_weight', 'body_sim'
+    # For most fields, replace nil or empty string with nil
     value.nil? || value.strip.empty? ? nil : value
   when 'launch_announced'
-    # Use regex to find a 4-digit number. If found, return it as an integer.
+    # Use regex to find a 4-digit number. If found, return it as an integer
     if match = value.to_s.match(/\b(\d{4})\b/)
       match[1].to_i
     else
-      # Return nil if no valid year is found.
+      # Return nil if no valid year is found
       nil
     end
   when 'launch_status'
-    # Keep 'Discontinued' or 'Cancelled' as is, otherwise try to find a 4-digit year.
+    # Keep 'Discontinued' or 'Cancelled' as is, otherwise try to find a 4-digit year
     if ['Discontinued', 'Cancelled'].include?(value)
       value
     else
       if match = value.to_s.match(/\b(\d{4})\b/)
-        match[1]  # Keep as a string to maintain uniformity in data type.
+        match[1]  # Keep as a string to maintain uniformity in data type
       else
-        # Return nil if the value is neither a valid year nor one of the specified strings.
+        # Return nil if the value is neither a valid year nor one of the specified strings
         nil
       end
     end
   when 'body_weight'
-    # Use regex to extract the number before 'g' and convert it to a float.
+    # Use regex to extract the number before 'g' and convert it to a float
     if match = value.to_s.match(/(\d+)\s*g/)
       match[1].to_f
     else
-      # Return nil if no valid number is found before 'g'.
+      # Return nil if no valid number is found before 'g'
+      nil
+    end
+  when 'body_sim'
+    # Replace "No" or "Yes" values with nil, consider other strings composed of letters as valid
+    if value == "No" || value == "Yes"
+      nil
+    else
+      value  # Assuming other strings are valid.
+    end
+  when 'display_size'
+    # Use regex to find an integer or a float followed by the word "inches"
+    if match = value.to_s.match(/(\d+(\.\d+)?)\s*inches/)
+      match[1].to_f
+    else
+      # Return nil if the format is not as expected
       nil
     end
   else
-    # By default, return the value as it is.
+    # By default, return the value as it is
     value
   end
 end
+
 
 
 
