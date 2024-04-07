@@ -128,23 +128,23 @@ CSV.open(new_csv_file, 'w') do |csv|
   # Write the header row to the new CSV
   csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os']
 
-  # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
-  csv_data.each do |cell|
-    csv << [
-      cell.oem,
-      cell.model,
-      cell.launch_announced,
-      cell.launch_status,
-      cell.body_dimensions,
-      cell.body_weight,
-      cell.body_sim,
-      cell.display_type,
-      cell.display_size,
-      cell.display_resolution,
-      cell.feature_sensors,
-      cell.platform_os
-    ]
-  end
-end
+#   # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
+#   csv_data.each do |cell|
+#     csv << [
+#       cell.oem,
+#       cell.model,
+#       cell.launch_announced,
+#       cell.launch_status,
+#       cell.body_dimensions,
+#       cell.body_weight,
+#       cell.body_sim,
+#       cell.display_type,
+#       cell.display_size,
+#       cell.display_resolution,
+#       cell.feature_sensors,
+#       cell.platform_os
+#     ]
+#   end
+# end
 
 
