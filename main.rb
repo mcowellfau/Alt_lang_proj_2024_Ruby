@@ -182,3 +182,39 @@ end
 # end
 
 # puts "Unique Feature Sensors and Platform OS values have been written to #{output_file_name}"
+
+#FUNCTION 3
+# def find_highest_average_weight(csv_data)
+#   # Initialize a hash to hold the sum of weights and count of phones for each OEM
+#   weights_sum_and_count = {}
+
+#   # Iterate over each cell to aggregate weights by OEM
+#   csv_data.each do |cell|
+#     # Next line if weight is nil or not a number
+#     next if cell.body_weight.nil? || !cell.body_weight.is_a?(Numeric)
+
+#     # If the OEM key doesn't exist, initialize it
+#     weights_sum_and_count[cell.oem] ||= { sum: 0, count: 0 }
+#     # Aggregate the total weight and increment the count
+#     weights_sum_and_count[cell.oem][:sum] += cell.body_weight
+#     weights_sum_and_count[cell.oem][:count] += 1
+#   end
+
+#   # Calculate the average weight for each OEM
+#   average_weights = weights_sum_and_count.map do |oem, data|
+#     [oem, data[:sum] / data[:count].to_f]
+#   end.to_h
+
+#   # Find the OEM with the highest average weight
+#   highest_average = average_weights.max_by { |oem, avg_weight| avg_weight }
+
+#   # Return the OEM and their average weight
+#   highest_average
+# end
+
+# highest_avg_oem, highest_avg_weight = find_highest_average_weight(csv_data)
+# if highest_avg_oem && highest_avg_weight
+#   puts "The company (OEM) with the highest average weight of phone body is #{highest_avg_oem} with an average weight of #{highest_avg_weight.round(2)} grams."
+# else
+#   puts "Could not determine the OEM with the highest average weight."
+# end
