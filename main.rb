@@ -291,3 +291,48 @@ end
 # else
 #   puts "No data available for phone launches after 1999."
 # end
+
+#FUNCTION 7
+# def prompt_for_cell_data
+#   puts "Enter new phone data:"
+#   # Initialize an empty hash for attributes
+#   attributes = {}
+#   #Attributes for new input
+#   ['oem', 'model', 'launch_announced', 'launch_status', 
+#    'body_dimensions', 'body_weight', 'body_sim', 'display_type', 
+#    'display_size', 'display_resolution', 'feature_sensors', 'platform_os'].each do |attr|
+#     print "#{attr.gsub('_', ' ').capitalize}: "
+#     input = gets.chomp  # Get user input
+#     attributes[attr.to_sym] = input  # Store input in attributes hash
+#   end
+  
+#   # Create a new Cell instance with the user-provided attributes
+#   Cell.new(attributes)
+# end
+# def append_row_to_csv(file_path)
+#   # Use prompt_for_cell_data to get a new Cell instance from user input
+#   new_cell = prompt_for_cell_data
+  
+#   # Open the existing CSV file in append mode
+#   CSV.open(file_path, 'a') do |csv|
+#     # Append the new row
+#     csv << [
+#       new_cell.oem, 
+#       new_cell.model, 
+#       new_cell.launch_announced, 
+#       new_cell.launch_status, 
+#       new_cell.body_dimensions, 
+#       new_cell.body_weight, 
+#       new_cell.body_sim, 
+#       new_cell.display_type, 
+#       new_cell.display_size, 
+#       new_cell.display_resolution, 
+#       new_cell.feature_sensors, 
+#       new_cell.platform_os
+#     ]
+#   end
+
+#   puts "New data appended to #{file_path}"
+# end
+# append_row_to_csv('test_cells.csv')
+
