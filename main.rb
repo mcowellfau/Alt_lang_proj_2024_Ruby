@@ -123,10 +123,10 @@ end
 # New csv file name
 new_csv_file = 'cleaned_cells.csv'
 
-# Open a new CSV file for writing
-CSV.open(new_csv_file, 'w') do |csv|
-  # Write the header row to the new CSV
-  csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os']
+# # Open a new CSV file for writing
+# CSV.open(new_csv_file, 'w') do |csv|
+#   # Write the header row to the new CSV
+#   csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os']
 
 #   # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
 #   csv_data.each do |cell|
