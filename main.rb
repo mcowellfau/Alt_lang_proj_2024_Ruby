@@ -6,12 +6,12 @@ class Cell
     # Creates getter and setter methods for each cell phone attribute using the correct naming convention
     attr_accessor :oem, :model, :launch_announced, :launch_status,
                   :body_dimensions, :body_weight, :body_sim, :display_type,
-                  :display_size, :display_resolution, :feature_sensors, :platform_os
+                  :display_size, :display_resolution, :features_sensors, :platform_os
 
     # Initializes a new instance of the Cell class, setting the attributes with the values provided
     def initialize(oem, model, launch_announced, launch_status,
                    body_dimensions, body_weight, body_sim, display_type,
-                   display_size, display_resolution, feature_sensors, platform_os)
+                   display_size, display_resolution, features_sensors, platform_os)
       @oem = oem
       @model = model
       @launch_announced = launch_announced
@@ -22,7 +22,7 @@ class Cell
       @display_type = display_type
       @display_size = display_size
       @display_resolution = display_resolution
-      @feature_sensors = feature_sensors
+      @features_sensors = features_sensors
       @platform_os = platform_os
     end
 end
@@ -79,7 +79,7 @@ def clean_data(value, column_name)
       # Return nil if the format is not as expected
       nil
     end
-  when 'feature_sensors'
+  when 'features_sensors'
     # Check if the value is purely numeric
     if value.to_s.match(/\A\d+(\.\d+)?\z/)
       nil  # Return nil if the value is purely numeric
@@ -115,40 +115,39 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
     clean_data(row['display_type'], 'display_type'),
     clean_data(row['display_size'], 'display_size'),
     clean_data(row['display_resolution'], 'display_resolution'),
-    clean_data(row['feature_sensors'], 'feature_sensors'),
+    clean_data(row['features_sensors'], 'features_sensors'),
     clean_data(row['platform_os'], 'platform_os')
   )
 end
-
+#COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (123-148) TO USE
 # New csv file name
 new_csv_file = 'cleaned_cells.csv'
 
-# # Open a new CSV file for writing
-# CSV.open(new_csv_file, 'w') do |csv|
-#   # Write the header row to the new CSV
-#   csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'feature_sensors', 'platform_os']
+# Open a new CSV file for writing
+CSV.open(new_csv_file, 'w') do |csv|
+  # Write the header row to the new CSV
+  csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'features_sensors', 'platform_os']
 
-#   # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
-#   csv_data.each do |cell|
-#     csv << [
-#       cell.oem,
-#       cell.model,
-#       cell.launch_announced,
-#       cell.launch_status,
-#       cell.body_dimensions,
-#       cell.body_weight,
-#       cell.body_sim,
-#       cell.display_type,
-#       cell.display_size,
-#       cell.display_resolution,
-#       cell.feature_sensors,
-#       cell.platform_os
-#     ]
-#   end
-# end
+  # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
+  csv_data.each do |cell|
+    csv << [
+      cell.oem,
+      cell.model,
+      cell.launch_announced,
+      cell.launch_status,
+      cell.body_dimensions,
+      cell.body_weight,
+      cell.body_sim,
+      cell.display_type,
+      cell.display_size,
+      cell.display_resolution,
+      cell.features_sensors,
+      cell.platform_os
+    ]
+  end
+end
 
-
-# FUNCTION 1
+#FUNCTION 1
 # # Collect unique 'oem' and 'model' values
 # unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
 # unique_models = csv_data.map(&:model).uniq.compact
