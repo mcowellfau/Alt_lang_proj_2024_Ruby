@@ -263,3 +263,31 @@ end
 # end
 # number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
 # puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
+
+# FUNCTION 6
+# def year_with_most_phones_post_1999(csv_data)
+#   # Initialize a hash to keep track of phone launches per year
+#   launches_per_year = Hash.new(0)
+
+#   csv_data.each do |cell|
+#     # Extract the year from launch_announced
+#     year_match = cell.launch_announced.to_s.match(/\b(20\d{2})\b/)
+#     year = year_match ? year_match[1].to_i : nil
+
+#     # Increment the count for the year if it's 2000 or later
+#     launches_per_year[year] += 1 if year && year > 1999
+#   end
+
+#   # Find the year with the maximum number of launches
+#   max_launches_year = launches_per_year.max_by { |year, count| count }
+
+#   # Return the year and the number of launches
+#   max_launches_year
+# end
+
+# max_year, max_launches = year_with_most_phones_post_1999(csv_data)
+# if max_year && max_launches
+#   puts "The year with the most phone launches (after 1999) is #{max_year} with #{max_launches} launches."
+# else
+#   puts "No data available for phone launches after 1999."
+# end
