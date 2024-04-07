@@ -240,8 +240,6 @@ end
 
 #   phones_different_years
 # end
-
-# # Example usage
 # different_years_phones = find_phones_announced_and_released_different_years(csv_data)
 # if different_years_phones.any?
 #   puts "Phones announced and released in different years:"
@@ -252,3 +250,16 @@ end
 #   puts "No phones were found that were announced in one year and released in another."
 # end
 
+#FUNCTION 5
+def count_phones_with_one_features_sensor(csv_data)
+  count = 0
+
+  csv_data.each do |cell|
+    sensors = cell.features_sensors.to_s.split(',')
+    count += 1 if sensors.length == 1 && sensors[0].strip.length > 0
+  end
+
+  count
+end
+number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
+puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
