@@ -218,3 +218,37 @@ end
 # else
 #   puts "Could not determine the OEM with the highest average weight."
 # end
+
+#FUNCTION 4
+# def find_phones_announced_and_released_different_years(csv_data)
+#   phones_different_years = []
+
+#   csv_data.each do |cell|
+#     # Extract the announced year and the release year using regex
+#     announced_year_match = cell.launch_announced.to_s.match(/\b(\d{4})\b/)
+#     release_year_match = cell.launch_status.to_s.match(/Released (\d{4})/)
+
+#     # Convert matches to integers
+#     announced_year = announced_year_match ? announced_year_match[1].to_i : nil
+#     release_year = release_year_match ? release_year_match[1].to_i : nil
+
+#     # Check if both years are present and different, then add to the list
+#     if announced_year && release_year && announced_year != release_year
+#       phones_different_years << { oem: cell.oem, model: cell.model, announced_year: announced_year, release_year: release_year }
+#     end
+#   end
+
+#   phones_different_years
+# end
+
+# # Example usage
+# different_years_phones = find_phones_announced_and_released_different_years(csv_data)
+# if different_years_phones.any?
+#   puts "Phones announced and released in different years:"
+#   different_years_phones.each do |phone|
+#     puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
+#   end
+# else
+#   puts "No phones were found that were announced in one year and released in another."
+# end
+
