@@ -314,9 +314,31 @@ end
 # model_to_delete = gets.chomp
 # delete_row_by_model('test_cells.csv', model_to_delete)
 
+#FUNCTION 8?
+
+def search_by_oem(file_path, oem_to_search)
+  matching_rows = CSV.read(file_path, headers: true).select do |row|
+    row['oem'].casecmp?(oem_to_search)
+  end
+
+  # Check if any rows were found
+  if matching_rows.empty?
+    puts "No data found for OEM: #{oem_to_search}"
+  else
+    puts "Found #{matching_rows.size} row(s) for OEM: #{oem_to_search}"
+    matching_rows.each_with_index do |row, index|
+      puts "Row #{index + 1}: #{row.to_h}"
+    end
+  end
+end
+
+puts "Enter the OEM you want to search for:"
+oem_to_search = gets.chomp
+search_by_oem('your_csv_file_path.csv', oem_to_search)
 
 #TO DO:
 # Add menu and encapsulate functions in menu
 # fix the one question related to the one unfinished
 # add unit tests
 # add all completed changes to replit
+
