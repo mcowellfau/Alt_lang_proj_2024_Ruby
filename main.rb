@@ -315,3 +315,8 @@ end
 # delete_row_by_model('test_cells.csv', model_to_delete)
 
 
+#TO DO:
+# Add menu and encapsulate functions in menu
+# fix the one question related to the one unfinished
+# add unit tests
+# add all completed changes to replit
