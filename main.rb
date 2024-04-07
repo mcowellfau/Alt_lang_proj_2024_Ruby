@@ -164,3 +164,21 @@ end
 # puts "Unique OEMs and Models have been written to unique_oem_and_models.txt"
 
 #FUNCTION 2
+# # Extract unique 'features_sensors' values
+# unique_features_sensors = csv_data.map(&:features_sensors).uniq.compact
+# # Extract unique 'platform_os' values
+# unique_platform_os = csv_data.map(&:platform_os).uniq.compact
+
+# # Define the output file name
+# output_file_name = 'unique_features_and_platforms.txt'
+
+# # Open a text file for writing the unique values
+# File.open(output_file_name, 'w') do |file|
+#   file.puts "Unique Feature Sensors:"
+#   unique_features_sensors.each { |feature| file.puts feature }
+
+#   file.puts "\nUnique Platform OS:"
+#   unique_platform_os.each { |os| file.puts os }
+# end
+
+# puts "Unique Feature Sensors and Platform OS values have been written to #{output_file_name}"
