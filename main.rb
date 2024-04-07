@@ -30,8 +30,12 @@ end
 def clean_data(value, column_name)
   case column_name
   when 'oem', 'model', 'body_dimensions', 'display_type', 'display_resolution'
-    # For most fields, replace nil or empty string with nil
-    value.nil? || value.strip.empty? ? nil : value
+    # Replace nil, empty string, or "-" with nil
+    if value.nil? || value.strip.empty? || value.strip == "-"
+      nil
+    else
+      value
+    end  
   when 'launch_announced'
     # Use regex to find a 4-digit number. If found, return it as an integer
     if match = value.to_s.match(/\b(\d{4})\b/)
