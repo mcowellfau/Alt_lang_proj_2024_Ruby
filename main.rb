@@ -293,8 +293,6 @@ end
 # end
 
 #FUNCTION 7
-require 'csv'
-
 def delete_row_by_model(file_path, model_to_delete)
   # Read the existing data
   table = CSV.table(file_path)
