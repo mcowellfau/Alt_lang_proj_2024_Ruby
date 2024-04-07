@@ -251,15 +251,15 @@ end
 # end
 
 #FUNCTION 5
-def count_phones_with_one_features_sensor(csv_data)
-  count = 0
+# def count_phones_with_one_features_sensor(csv_data)
+#   count = 0
 
-  csv_data.each do |cell|
-    sensors = cell.features_sensors.to_s.split(',')
-    count += 1 if sensors.length == 1 && sensors[0].strip.length > 0
-  end
+#   csv_data.each do |cell|
+#     sensors = cell.features_sensors.to_s.split(',')
+#     count += 1 if sensors.length == 1 && sensors[0].strip.length > 0
+#   end
 
-  count
-end
-number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
-puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
+#   count
+# end
+# number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
+# puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
