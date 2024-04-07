@@ -293,5 +293,27 @@ end
 # end
 
 #FUNCTION 7
+require 'csv'
+
+def delete_row_by_model(file_path, model_to_delete)
+  # Read the existing data
+  table = CSV.table(file_path)
+
+  # Find the row(s) where the model matches the user input and delete it/them
+  table.delete_if do |row|
+    row[:model] == model_to_delete
+  end
+
+  # Write the modified data back to the file
+  File.open(file_path, 'w') do |f|
+    f.write(table.to_csv)
+  end
+
+  puts "Row(s) with model '#{model_to_delete}' have been deleted from #{file_path}"
+end
+
+puts "Enter the model you want to delete:"
+model_to_delete = gets.chomp
+delete_row_by_model('test_cells.csv', model_to_delete)
 
 
