@@ -148,18 +148,18 @@ new_csv_file = 'cleaned_cells.csv'
 # end
 
 
-FUNCTION 1
-# Collect unique 'oem' and 'model' values
-unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
-unique_models = csv_data.map(&:model).uniq.compact
+# FUNCTION 1
+# # Collect unique 'oem' and 'model' values
+# unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
+# unique_models = csv_data.map(&:model).uniq.compact
 
-# Open a text file for writing
-File.open('unique_oem_and_models.txt', 'w') do |file|
-  file.puts "Unique OEMs:"
-  unique_oems.each { |oem| file.puts oem }
+# # Open a text file for writing
+# File.open('unique_oem_and_models.txt', 'w') do |file|
+#   file.puts "Unique OEMs:"
+#   unique_oems.each { |oem| file.puts oem }
 
-  file.puts "\nUnique Models:"
-  unique_models.each { |model| file.puts model }
-end
+#   file.puts "\nUnique Models:"
+#   unique_models.each { |model| file.puts model }
+# end
 
-puts "Unique OEMs and Models have been written to unique_oem_and_models.txt"
+# puts "Unique OEMs and Models have been written to unique_oem_and_models.txt"
