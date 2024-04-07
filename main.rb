@@ -121,31 +121,31 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
 end
 #COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (123-148) TO USE
 # New csv file name
-new_csv_file = 'cleaned_cells.csv'
+# new_csv_file = 'cleaned_cells.csv'
 
-# Open a new CSV file for writing
-CSV.open(new_csv_file, 'w') do |csv|
-  # Write the header row to the new CSV
-  csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'features_sensors', 'platform_os']
+# # Open a new CSV file for writing
+# CSV.open(new_csv_file, 'w') do |csv|
+#   # Write the header row to the new CSV
+#   csv << ['oem', 'model', 'launch_announced', 'launch_status', 'body_dimensions', 'body_weight', 'body_sim', 'display_type', 'display_size', 'display_resolution', 'features_sensors', 'platform_os']
 
-  # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
-  csv_data.each do |cell|
-    csv << [
-      cell.oem,
-      cell.model,
-      cell.launch_announced,
-      cell.launch_status,
-      cell.body_dimensions,
-      cell.body_weight,
-      cell.body_sim,
-      cell.display_type,
-      cell.display_size,
-      cell.display_resolution,
-      cell.features_sensors,
-      cell.platform_os
-    ]
-  end
-end
+#   # Iterate over each Cell instance in csv_data and write its attributes to the new CSV
+#   csv_data.each do |cell|
+#     csv << [
+#       cell.oem,
+#       cell.model,
+#       cell.launch_announced,
+#       cell.launch_status,
+#       cell.body_dimensions,
+#       cell.body_weight,
+#       cell.body_sim,
+#       cell.display_type,
+#       cell.display_size,
+#       cell.display_resolution,
+#       cell.features_sensors,
+#       cell.platform_os
+#     ]
+#   end
+# end
 
 #FUNCTION 1
 # # Collect unique 'oem' and 'model' values
