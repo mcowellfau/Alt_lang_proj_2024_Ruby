@@ -221,35 +221,35 @@ end
 
 #FUNCTION 4
 
-def phones_announced_released_different_years(csv_data)
-  phones_different_years = []
+# def phones_announced_released_different_years(csv_data)
+#   phones_different_years = []
 
-  csv_data.each do |cell|
-    # Directly use the launch_announced year assuming it's always numeric
-    announced_year = cell.launch_announced.to_i
+#   csv_data.each do |cell|
+#     # Directly use the launch_announced year assuming it's always numeric
+#     announced_year = cell.launch_announced.to_i
 
-    # Attempt to extract a numeric year from launch_status, if present
-    release_year_match = cell.launch_status.match(/\b(\d{4})\b/)
-    release_year = release_year_match ? release_year_match[1].to_i : nil
+#     # Attempt to extract a numeric year from launch_status, if present
+#     release_year_match = cell.launch_status.match(/\b(\d{4})\b/)
+#     release_year = release_year_match ? release_year_match[1].to_i : nil
 
-    # Compare the years, checking both are valid (non-zero) numbers before comparing
-    if announced_year > 0 && release_year && announced_year != release_year
-      phones_different_years << { oem: cell.oem, model: cell.model, announced_year: announced_year, release_year: release_year }
-    end
-  end
+#     # Compare the years, checking both are valid (non-zero) numbers before comparing
+#     if announced_year > 0 && release_year && announced_year != release_year
+#       phones_different_years << { oem: cell.oem, model: cell.model, announced_year: announced_year, release_year: release_year }
+#     end
+#   end
 
-  phones_different_years
-end
+#   phones_different_years
+# end
 
-different_years_phones = phones_announced_released_different_years(csv_data)
-if different_years_phones.any?
-  puts "Phones announced and released in different years:"
-  different_years_phones.each do |phone|
-    puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
-  end
-else
-  puts "No phones were found that were announced in one year and released in another."
-end
+# different_years_phones = phones_announced_released_different_years(csv_data)
+# if different_years_phones.any?
+#   puts "Phones announced and released in different years:"
+#   different_years_phones.each do |phone|
+#     puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
+#   end
+# else
+#   puts "No phones were found that were announced in one year and released in another."
+# end
 
 
 #FUNCTION 5
