@@ -8,8 +8,8 @@ I chose my the latest version of Ruby as my programming language (Ruby + Devkit 
 What company (oem) has the highest average weight of the phone body?<br>
 The company with the highest average weight of the phone body is Lenovo with an average weight of 292.6 grams
 ![alt text](consoleOutput1.png) <br>
-Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.<br>
-There were 4 phones that were announced one year and released another:
+Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.
+<br>There were 4 phones that were announced one year and released another:
 1. OEM: Motorola, Model: One Hyper A:2019 R:2020
 2. OEM: Motorola, Model: Razr 2019 A:2019 R:2020
 3. OEM: Xiaomi, Model: Redmi K30 5G A:2019 R:2020
