@@ -220,35 +220,37 @@ end
 # end
 
 #FUNCTION 4
-# def find_phones_announced_and_released_different_years(csv_data)
-#   phones_different_years = []
 
-#   csv_data.each do |cell|
-#     # Extract the announced year and the release year using regex
-#     announced_year_match = cell.launch_announced.to_s.match(/\b(\d{4})\b/)
-#     release_year_match = cell.launch_status.to_s.match(/Released (\d{4})/)
+def phones_announced_released_different_years(csv_data)
+  phones_different_years = []
 
-#     # Convert matches to integers
-#     announced_year = announced_year_match ? announced_year_match[1].to_i : nil
-#     release_year = release_year_match ? release_year_match[1].to_i : nil
+  csv_data.each do |cell|
+    # Directly use the launch_announced year assuming it's always numeric
+    announced_year = cell.launch_announced.to_i
 
-#     # Check if both years are present and different, then add to the list
-#     if announced_year && release_year && announced_year != release_year
-#       phones_different_years << { oem: cell.oem, model: cell.model, announced_year: announced_year, release_year: release_year }
-#     end
-#   end
+    # Attempt to extract a numeric year from launch_status, if present
+    release_year_match = cell.launch_status.match(/\b(\d{4})\b/)
+    release_year = release_year_match ? release_year_match[1].to_i : nil
 
-#   phones_different_years
-# end
-# different_years_phones = find_phones_announced_and_released_different_years(csv_data)
-# if different_years_phones.any?
-#   puts "Phones announced and released in different years:"
-#   different_years_phones.each do |phone|
-#     puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
-#   end
-# else
-#   puts "No phones were found that were announced in one year and released in another."
-# end
+    # Compare the years, checking both are valid (non-zero) numbers before comparing
+    if announced_year > 0 && release_year && announced_year != release_year
+      phones_different_years << { oem: cell.oem, model: cell.model, announced_year: announced_year, release_year: release_year }
+    end
+  end
+
+  phones_different_years
+end
+
+different_years_phones = phones_announced_released_different_years(csv_data)
+if different_years_phones.any?
+  puts "Phones announced and released in different years:"
+  different_years_phones.each do |phone|
+    puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
+  end
+else
+  puts "No phones were found that were announced in one year and released in another."
+end
+
 
 #FUNCTION 5
 # def count_phones_with_one_features_sensor(csv_data)
