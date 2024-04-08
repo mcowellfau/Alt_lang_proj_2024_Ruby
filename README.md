@@ -7,17 +7,17 @@ I chose my the latest version of Ruby as my programming language (Ruby + Devkit 
 ### Answer the following questions (and provide a corresponding screen showing output answering them):
 What company (oem) has the highest average weight of the phone body?
 The company with the highest average weight of the phone body is Lenovo with an average weight of 292.6 grams
-![alt text](consoleOutput1.png)
+![alt text](consoleOutput1.png) <br>
 Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.
 There were 4 phones that were announced one year and released another:
 1. OEM: Motorola, Model: One Hyper A:2019 R:2020
 2. OEM: Motorola, Model: Razr 2019 A:2019 R:2020
 3. OEM: Xiaomi, Model: Redmi K30 5G A:2019 R:2020
 4. OEM: Xiaomi, Model: Mi Mix Alpha A:2019 R:2020
-![alt text](consoleOutput3.png)
+![alt text](consoleOutput3.png) <br>
 How many phones have only one feature sensor?
 There are 432 phones with only one feature sensor
-![alt text](consoleOutput2.png)
+![alt text](consoleOutput2.png) <br>
 What year had the most phones launched in any year later than 1999? 
 The year 2019 had the most phone launches after 1999 with 304 launches
 ![alt text](consoleOutput4.png)
