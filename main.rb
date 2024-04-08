@@ -338,9 +338,38 @@ end
 # oem_to_search = gets.chomp
 # search_by_oem('your_csv_file_path.csv', oem_to_search)
 
-#TO DO:
-# Add menu and encapsulate functions in menu
-# fix the one question related to the one unfinished
+
+# loop do
+  #   puts "\nMenu Options:"
+  #   puts "1. Execute Function 1"
+  #   puts "2. Execute Function 2"
+  #   puts "3. Execute Function 3"
+  #   puts "3. Execute Function 3"
+  #   puts "3. Execute Function 3"
+  #   puts "3. Execute Function 3"
+  #   puts "3. Execute Function 3"
+  #   puts "3. Execute Function 3"
+  #   puts "4. Exit"
+  
+  #   print "Enter your choice (1-4): "
+  #   choice = gets.chomp
+  
+  #   case choice
+  #   when "1"
+  #     function1
+  #   when "2"
+  #     function2
+  #   when "3"
+  #     function3
+  #   when "4"
+  #     puts "Exiting..."
+  #     break # Exit the loop
+  #   else
+  #     puts "Invalid choice, please enter 1-4."
+  #   end
+  # end
+
+  #TO DO:
 # add unit tests
 # add all completed changes to replit
 
