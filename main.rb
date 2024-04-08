@@ -318,25 +318,29 @@ end
 
 #FUNCTION 8?
 
-# def search_by_oem(file_path, oem_to_search)
-#   matching_rows = CSV.read(file_path, headers: true).select do |row|
-#     row['oem'].casecmp?(oem_to_search)
-#   end
+def search_by_oem(file_path, oem_to_search, output_file_path)
+  matching_rows = CSV.read(file_path, headers: true).select do |row|
+    row['oem'].casecmp?(oem_to_search)
+  end
 
-#   # Check if any rows were found
-#   if matching_rows.empty?
-#     puts "No data found for OEM: #{oem_to_search}"
-#   else
-#     puts "Found #{matching_rows.size} row(s) for OEM: #{oem_to_search}"
-#     matching_rows.each_with_index do |row, index|
-#       puts "Row #{index + 1}: #{row.to_h}"
-#     end
-#   end
-# end
+  File.open(output_file_path, 'w') do |file|
+    # Check if any rows were found and write the result to the file
+    if matching_rows.empty?
+      file.puts "No data found for OEM: #{oem_to_search}"
+    else
+      file.puts "Found #{matching_rows.size} row(s) for OEM: #{oem_to_search}"
+      matching_rows.each_with_index do |row, index|
+        file.puts "Row #{index + 1}: #{row.to_h}"
+      end
+    end
+  end
+  puts "Search results have been written to #{output_file_path}"
+end
 
-# puts "Enter the OEM you want to search for:"
-# oem_to_search = gets.chomp
-# search_by_oem('your_csv_file_path.csv', oem_to_search)
+# Example usage
+puts "Enter the OEM you want to search for:"
+oem_to_search = gets.chomp
+search_by_oem('cleaned_cells.csv', oem_to_search, 'search_results.txt')
 
 
 # loop do
