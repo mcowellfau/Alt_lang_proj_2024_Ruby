@@ -14,6 +14,7 @@ The company with the highest average weight of the phone body is Lenovo with an 
 2. OEM: Motorola, Model: Razr 2019 A:2019 R:2020
 3. OEM: Xiaomi, Model: Redmi K30 5G A:2019 R:2020
 4. OEM: Xiaomi, Model: Mi Mix Alpha A:2019 R:2020<br>
+
 ![alt text](consoleOutput3.png) 
 ### How many phones have only one feature sensor? <br>
 There are 432 phones with only one feature sensor<br>
