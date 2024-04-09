@@ -48,7 +48,11 @@ There are 432 phones with only one feature sensor<br>
 ![alt text](consoleOutput2.png) <br>
 ### What year had the most phones launched in any year later than 1999? <br>
 The year 2019 had the most phone launches after 1999 with 304 launches
-![alt text](consoleOutput4.png)
-
+![alt text](consoleOutput4.png)<br>
+### Notes: <br>
+1. Four of the functions that were put into the menu are related to the Report questions with output shown above.
+2. Not all of the unit tests function as intended but they were created to the best of my ability 
+3. The cleaned_cells.csv file was created as a separate file from the cells.csv provided and can be viewed/downloaded
+4. All functionality has been thoroughly tested and confirmed via replit
 
 
