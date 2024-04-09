@@ -1,0 +1,945 @@
+Unique OEMs:
+Benefon
+Garmin-Asus
+Gigabyte
+Google
+Haier
+Honor
+HP
+HTC
+Huawei
+i-mate
+i-mobile
+Icemobile
+Infinix
+Innostream
+Kyocera
+Lava
+Lenovo
+LG
+Maxon
+Meizu
+Micromax
+Mitac
+Mitsubishi
+Motorola
+NEC
+Neonode
+Nokia
+O2
+OnePlus
+Oppo
+Orange
+Palm
+Panasonic
+Pantech
+Philips
+Plum
+Qtek
+Realme
+Sagem
+Samsung
+Sendo
+Sewon
+Sharp
+Siemens
+Sony
+Sony Ericsson
+Spice
+T-Mobile
+TCL
+TECNO
+Tel.Me.
+Telit
+Ulefone
+Unnecto
+Vertu
+vivo
+VK Mobile
+Vodafone
+Wiko
+Xiaomi
+Yezz
+ZTE
+
+Unique Models:
+Vega
+nuvifone M10
+GSmart G1305 Boston
+GSmart
+Pixel 4 XL
+Pixel 4
+Pixel 3a XL
+Pixel 3a
+N60
+T3000
+V280
+V190
+V100
+P5
+Z8000
+8S 2020
+Play4
+Play4 Pro
+X10 5G
+V6
+9A
+9C
+9S
+9X Lite
+30 Pro+
+30 Pro
+30
+20e
+Play 4T Pro
+Play 4T
+8A 2020
+8A Prime
+30S
+Play 9A
+View30 Pro
+View30
+V30 Pro
+MagicWatch 2
+9X
+20 lite (China)
+Play 3e
+Play 3
+20S
+9X Pro
+9X (China)
+8S
+Pad 5 10.1
+Pad 5 8
+20 Pro
+20
+20 lite
+Slate8 Pro
+U20 5G
+Desire 20 Pro
+Wildfire R70
+Desire 19s
+Exodus 1s
+Wildfire X
+U19e
+Desire 19+
+Schubert
+Enjoy 20 Pro
+Enjoy Z 5G
+P Smart S
+Y8p
+P40 lite 5G
+P30 Pro New Edition
+MatePad T8
+Y8s
+Y6p
+Y5p
+P smart 2020
+nova 7 Pro 5G
+nova 7 5G
+nova 7 SE
+MatePad
+Watch GT 2e
+P40 Pro+
+P40 Pro
+P40
+P40 lite E
+P40 lite
+MatePad Pro 5G
+Mate Xs
+P30 lite New Edition
+Y7p
+nova 7i
+Y6s (2019)
+P smart Pro 2019
+nova 6 5G
+nova 6
+nova 6 SE
+MatePad Pro
+Y9s
+nova 5z
+Enjoy 10s
+Enjoy 10
+Mate 30 RS Porsche Design
+Mate 30 Pro 5G
+Mate 30 Pro
+Mate 30 5G
+Mate 30
+Watch GT 2
+nova 5i Pro
+Enjoy 10 Plus
+nova 5T
+MediaPad M6 10.8
+MediaPad M6 Turbo 8.4
+MediaPad M6 8.4
+nova 5 Pro
+nova 5
+nova 5i
+Y9 Prime (2019)
+P20 lite (2019)
+P Smart Z
+Mate 20 X (5G)
+Y5 (2019)
+Ascend Plus
+MediaPad 7 Youth
+G7002
+PDA2
+Smartphone2
+Smartphone
+510
+315
+Gravity 4.0
+Prime 5.5
+Prime 4.5
+Gravity Pro
+Quattro
+Hot 9 Play
+Note 7
+Note 7 Lite
+Hot 9 Pro
+Hot 9
+S5 Pro (16+32)
+S5 Pro (48+40)
+S5 lite
+Smart 4c
+Hot 8 Lite
+Hot 8
+Smart3 Plus
+S4
+Hot 7 Pro
+INNO A20
+INNO 75
+INNO 79
+INNO 78
+INNO 30
+INNO 55
+INNO 70
+INNO 99
+INNO 120
+INNO 110
+INNO 100
+TG 200
+Z71
+Iris Fuel F2
+M10 FHD REL
+Yoga Smart Tab
+K10 Plus
+K10 Note
+A6 Note
+Tab M8 (FHD)
+Tab M8 (HD)
+Tab M7
+Z6
+Z6 Pro 5G
+Z6 Youth
+Z6 Pro
+Yoga Tab 3 10
+Q61
+Stylo 6
+Velvet
+Folder 2
+V60 ThinQ 5G UW
+V60 ThinQ 5G
+Q51
+W10 Alpha
+K61
+K51S
+K41S
+G Pad 5 10.1
+V50S ThinQ 5G
+G8X ThinQ
+Q70
+K30 (2019)
+K20 (2019)
+K40S
+K50S
+W30 Pro
+W30
+W10
+Stylo 5
+G8S ThinQ
+Q8 (2018)
+X power 3
+K8 (2018)
+Watch Urbane LTE
+L20
+KM338
+U890
+P7200
+B2050
+M4410
+M4330
+M4300
+F3000
+F2410
+F2250
+U8290
+U8210
+U8200
+B2150
+B2100
+B2000
+F2400
+F1200
+F7250
+C2100
+G1800
+G1610
+G1700
+F2300
+F2100
+L3100
+C1200
+G1600
+G7200
+U8150
+G7070
+G7050
+G1500
+G5310
+W7020
+W5200
+LG-600
+LG-500
+LG-200
+MX-C90
+MX-C80
+MX-C180
+MX-A30
+MX-C60
+MX-C20
+MX-C110
+MX-E10
+MX-V10
+MX-V30
+MX-7990
+MX-E80
+MX-7750
+MX-C11
+MX-C160
+MX-7940
+MX-7920
+MX-7830
+MX-7600
+MX-6879
+MX-6869
+MX-6815
+MX-6814
+17 Pro
+17
+16T
+M10
+16s Pro
+16Xs
+16s
+A36 Bolt
+A28 Bolt
+Bolt A62
+Bolt A35
+Bolt A27
+GC275
+MIO Leap G50
+MIO Leap K1
+MIO A701
+MIO 8870
+MIO 8860
+M750
+M342i
+M341i/M720
+Trium Eclipse
+Trium Sirius
+Trium Mondo
+One Fusion+
+Moto G Fast
+Moto E (2020)
+Moto G Pro
+Edge+
+Moto G8 Power Lite
+Moto E6s (2020)
+Moto G8
+Moto G Stylus
+Moto G Power
+Moto G8 Power
+One Hyper
+Razr 2019
+Moto G8 Play
+Moto E6 Play
+Moto G8 Plus
+One Macro
+Moto E6 Plus
+One Zoom
+One Action
+Moto E6
+Moto Z4
+One Vision
+XOOM MZ604
+XOOM MZ601
+QUENCH
+XT701
+A910
+E895
+E1060
+C168
+E680i
+V560
+V186
+V176
+C980
+A780
+C975
+V555
+A840
+E398
+MPx
+MPx100
+V872
+V878
+A925
+A920
+V690
+A835
+T725
+T720i
+T720
+V70
+C336
+C332
+C331
+V60i
+Accompli 388
+V60
+Accompli 008
+Timeport 280
+V.box(V100)
+StarTAC 130
+StarTAC 85
+StarTAC Rainbow
+StarTAC 75+
+StarTAC 75
+SlimLite
+cd930
+cd920
+M3188
+M3288
+M3588
+M3688
+M3788
+M3888
+Moto Z4 Force
+Moto Z4 Play
+N401i
+N343i
+N200
+N923
+N920
+e338
+e228
+N410i
+N400i
+N331i
+N830
+N820
+e606
+e232
+DB4100
+G9D+
+N1m
+C5 Endi
+C2 Tennen
+C2 Tava
+150 (2020)
+125
+8.3 5G
+5.3
+1.3
+5310 (2020)
+2.3
+7.2
+6.2
+800 Tough
+2720 Flip
+220 4G
+110 (2019)
+105 (2019)
+3.1 C
+3.1 A
+2.2
+X6 8GB (2010)
+X6 16GB (2010)
+X6 (2009)
+6131 NFC
+8.1 Plus
+Cosmo
+XDA Orion
+X1b
+XM
+X4
+XDA IIs
+XDA IIi
+Xphone II
+XDA II
+Xphone
+XDA
+8 5G UW (Verizon)
+8 5G (T-Mobile)
+7T Pro 5G McLaren
+7T Pro
+7T
+7 Pro 5G
+Reno4 Pro 5G
+Reno4 5G
+Find X2 Neo
+A92s
+Find X2 Lite
+Ace2
+A12e
+Reno3
+Find X2 Pro
+Find X2
+Reno3 Pro
+F15
+Reno3 Pro 5G
+Reno3 Youth
+Reno3 5G
+A91
+A8
+Reno Ace
+Reno A
+A5 (2020)
+A9 (2020)
+Reno2
+Reno2 F
+Reno2 Z
+Reno Z
+A9x
+Reno 5G
+A1k
+A5 (AX5)
+A31 (2015)
+Neva jet 5G
+Gova
+Treo 650
+Eluga I7 (2019)
+Eluga DL1
+VS7
+MX7
+SA7
+X70
+GD87
+GD67
+GD75
+GD35
+GD93
+GD30
+Crux
+Laser P9050
+GF100
+GF200
+GB100
+W5510
+W6350
+W930
+362
+868
+859
+Fisio 625
+Fisio 620
+Fisio 610
+Azalis 268
+Azalis 238
+Diga
+Fizz
+Ram 8
+8600
+8300
+8080
+8060
+1010
+7070
+X3 SuperZoom
+6S
+X50 Pro Player
+Narzo 10
+Narzo 10A
+X50m 5G
+6i
+6 Pro
+X50 Pro 5G
+C3 (3 cameras)
+X50 5G
+5i
+5s
+C2s
+C2 2020
+X2 Pro
+XT 730G
+XT
+5 Pro
+3i
+3 Pro
+my411C Oxbow
+my230x
+my900C
+my500X
+my400V
+my301X
+my200x
+my100X
+MY C2-3
+myZ-5
+MY C3-2
+MY Z-55
+MY X6-2
+MY X2-2
+MY C5-2
+MY X1-2
+MY X-8
+MY X-4
+MY S-7
+MY Z-3
+MY C2-2
+SG 321i
+MY V-55
+MY X5-2
+MY V-75
+MY X-7
+MY V-65
+MY C-1
+MY X-1w
+MY C-2
+MY C-6
+MY C-5w
+MY X-2
+MY X-6
+MY G5
+MY X-3
+MY X-5
+MY 3078
+MW 3026
+MW 3052
+MW 3042
+MW 3040
+MW X1
+WA 3050
+MW 3020
+MC 3000
+MC 939 WAP
+MC 936
+MC 950
+MC 959
+MC 940
+MC 932
+RC 922
+MC 912
+MC 850
+MC 825 FM
+MC 820
+RC 750
+RC 730
+Galaxy Tab A 8.0 (2015)
+E1260B
+Continuum I400
+Focus
+P940
+D550
+P860
+Z700
+D710
+i530
+i505
+i250
+X900
+E410
+P705
+D700
+P500
+Watch Phone
+T400
+Q300
+Q200
+A400
+Q100
+SGH-250
+P600
+SV663
+M570
+S330
+J520
+SRS-3300
+SRD-3000
+SRD-200
+SGD-1050
+SGD-1030
+SGD-1020
+SGD-1010
+SGD-1000
+SGD-106
+SGD-105
+SGD-102
+SGD-101
+SG-2890CD
+SG-2300CD
+SG-2320CD
+SG-2200CD
+SG-P100
+Aquos Zero 2
+Aquos V
+AQUOS  941SH
+940SH
+550SH
+GX17
+GX40
+GX25/GZ200
+TM150
+GX30
+GX22
+GX20
+GX10i
+GX10
+GX1
+CX70
+PenPhone
+ST60
+U15
+ST55
+Xelibri 1
+Xelibri 2
+Xelibri 3
+Xelibri 4
+M55
+SL55
+S55
+SX45
+SL45i
+SL42
+SL45
+A36
+M30
+C28
+Xperia 1 II
+Xperia 10 II
+Xperia L4
+Xperia 5
+CMD Z7
+CMD J70
+CMD J7
+CMD MZ5
+CMD J6
+CMD Z1 plus
+CMD Z1
+CM-DX 2000
+CM-DX 1000
+Windows Phone 7
+Mi-285 Stellar
+Revvlry+
+Revvlry
+10 5G
+10 Pro
+10L
+Plex
+Spark Power 2
+Spark 5 Air
+Spark 5
+Camon 15 Premier
+Camon 15 Air
+Camon 15 Pro
+Camon 15
+Camon 12 Air
+Pop 3 Plus
+Spark 4 Lite
+Camon 12 Pro
+Camon 12
+Pouvoir 3 Air
+Pouvoir 3 Plus
+Pouvoir 3
+Spark 3
+Spark 3 Pro
+Spark Go
+Pop 2 F
+Pop 2 Plus
+Phantom 9
+T918
+T919i
+T919
+T909c
+C1000
+T91
+T90
+NEO
+G83
+G80
+G82
+G40
+GM 882
+GM 810
+Estremo
+GM 710
+Note 8P
+Armor X7 Pro
+Armor 7E
+Armor X7
+Armor 7
+Armor X6
+Armor 6S
+Armor 3W
+Armor 3WT
+Armor X5
+T2
+Armor X3
+Armor 5S
+Armor 6E
+Note 7P
+S11
+Armor X2
+S1
+Armor X
+Armor 2
+T2 Pro
+Quattro Z
+Drone Z
+Drone
+Ascent Ti Damascus Steel
+V19 Neo
+Z5x (2020)
+X50 Pro+
+X50 Pro
+Y70s
+iQOO Z1
+X50 Lite
+Y30
+iQOO Neo3 5G
+Y50
+V19
+S6 5G
+NEX 3S 5G
+V19 (Indonesia)
+Z6 5G
+iQOO 3 5G
+X30 Pro
+X30
+V17
+iQOO Neo 855 Racing
+Z5i
+V17 (Russia)
+S1 Pro
+Y3 Standard
+Y19
+iQOO Neo 855
+Y11 (2019)
+Y3 (4GB+64GB)
+Y3
+NEX 3 5G
+V17 Pro
+NEX 3
+Z1x
+iQOO Pro 5G
+iQOO Pro
+Y90
+V17 Neo
+Z1Pro
+iQOO Neo
+Z5x
+S1 Pro (China)
+Z3x
+Y17
+Y12
+S1 (China)
+Y91i (India)
+Y15S (2015)
+Y15 (2013)
+VK4500
+VK800
+Smart V10
+Smart N10
+247 Solar
+V720
+Y80
+Sunny3
+View3 Pro
+View3
+Sunny2 Plus
+Sunny2
+Sunny Max
+Redmi 9
+Redmi 10X Pro 5G
+Redmi 10X 5G
+Redmi 10X 4G
+Redmi K30i 5G
+Poco F2 Pro
+Redmi K30 5G Racing
+Redmi Note 9 Pro
+Redmi Note 9
+Mi Note 10 Lite
+Mi 10 Youth 5G
+Mi 10 Lite 5G
+Redmi K30 Pro Zoom
+Redmi K30 Pro
+Redmi Note 9S
+Redmi Note 9 Pro Max
+Redmi Note 9 Pro (India)
+Black Shark 3 Pro
+Black Shark 3
+Mi 10 Pro 5G
+Mi 10 5G
+Redmi 8A Pro
+Redmi 8A Dual
+Poco X2
+Redmi K30
+Redmi K30 5G
+Redmi Note 8T
+Mi Note 10 Pro
+Mi Note 10
+Mi CC9 Pro
+Watch Color
+Mi Watch
+Redmi 8
+Redmi 8A
+Mi Mix Alpha
+Mi 9 Pro 5G
+Mi 9 Pro
+Redmi K20 Pro Premium
+Mi 9 Lite
+Redmi Note 8 Pro
+Black Shark 2 Pro
+Mi A3
+Redmi 7A
+Mi CC9e
+Mi CC9
+Redmi Note 8
+Mi 9T Pro
+Mi 9T
+Redmi K20
+Redmi K20 Pro
+Redmi Note 7S
+Redmi Y3
+Redmi 5 Plus (Redmi Note 5)
+Mi Max 4
+Mi Max 4 Pro
+Mi 9X
+Max 1 Plus
+LIV1
+nubia Red Magic 5G Lite
+nubia Play
+Axon 11 4G
+Axon 11 5G
+nubia Red Magic 5G
+Axon 10s Pro 5G
+Blade Max View
+Blade A7 Prime
+Blade 10 Prime
+Blade 20
+nubia Red Magic 3s
+nubia Z20
+nubia X 5G
+Blade A5 (2019)
+Blade A3 (2019)
+Blade L8
+nubia Red Magic 3
+Axon 10 Pro
+Blade V10 Vita
+Blade A7 Vita
+Blade A7
+V889M
+N880E
+Skate Acqua
+Sage

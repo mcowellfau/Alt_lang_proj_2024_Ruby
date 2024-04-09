@@ -1,0 +1,116 @@
+Unique Feature Sensors:
+V1
+Accelerometer
+Face ID, accelerometer, gyro, proximity, compass, barometer
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass, barometer
+Accelerometer, proximity
+Fingerprint (side-mounted), accelerometer, gyro, proximity, compass
+Accelerometer, proximity, compass
+Fingerprint (rear-mounted), accelerometer, proximity
+Fingerprint (rear-mounted), accelerometer, proximity, compass
+Fingerprint (under display, optical), accelerometer, gyro, proximity, compass
+Fingerprint (under display, optical), accelerometer, proximity, compass
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass
+Accelerometer, gyro, heart rate, barometer, compass
+Accelerometer, gyro, compass
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass, SAR
+Fingerprint (rear-mounted), accelerometer, gyro, proximity
+Iris scanner, fingerprint (rear-mounted), accelerometer, gyro, proximity, compass
+Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum
+Accelerometer, gyro, proximity, compass
+Accelerometer, gyro, heart rate, barometer, compass, SpO2
+Infrared face recognition, fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum
+Fingerprint (side-mounted), accelerometer, proximity, compass
+Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, barometer
+Face ID, fingerprint (under display, optical), accelerometer, gyro, proximity, barometer, compass
+Fingerprint (front-mounted), accelerometer, gyro, proximity, compass
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, barometer, compass
+Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, barometer
+Fingerprint (side-mounted), accelerometer
+Accelerometer, gyro, proximity, heart rate, barometer
+Accelerometer, gyro, barometer, compass
+Accelerometer, gyro, proximity
+Accelerometer, proximity, compassFingerprint (rear-mounted), accelerometer, proximity, compass - India only
+Fingerprint (side-mounted), accelerometer, gyro, proximity, barometer, compass, color spectrum
+Fingerprint (under display, optical), accelerometer, proximity
+Fingerprint (rear-mounted), accelerometer
+Barometer, altimeter
+Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, heart rate, baroceptor, coulombmeter
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass, baroceptor, uv sensor
+Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, barometer, coulombmeter
+Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass, coulombmeter
+Fingerprint (side-mounted), accelerometer, proximity
+Fingerprint (front-mounted), accelerometer, proximity, gyro, compass, barometer
+Fingerprint (under display, optical), accelerometer, gyro, compass
+Accelerometer, gyro, heart rate, barometer
+Fingerprint, accelerometer, gyro, proximity, compass
+Dual fingerprint (side-mounted), accelerometer, gyro, proximity, compass
+
+Unique Platform OS:
+Microsoft Windows Mobile 6.5.3 Professional
+Android 1.6 (Donut)
+Android 10
+Android 9.0 (Pie)
+Linux
+Huawei wearable platform
+Android 8.0 (Oreo)
+Android 4.2.2 (Jelly Bean)
+Android 9 (Pie)
+Android 8.1 (Oreo)
+Microsoft Windows Phone 7
+Android 4.0 (Ice Cream Sandwich)
+Android 4.1.2 (Jelly Bean)
+Microsoft Windows Mobile 2003 SE PocketPC
+Microsoft Smartphone 2003 OS
+Microsoft Windows Mobile Smartphone
+Android 4.4.2 (KitKat)
+Android 9.0 Pie (Go edition) - 32/2GBAndroid 9.0 (Pie) - 32/3GB
+Android 8.1 Oreo (Go edition)
+Android 5.1 (Lollipop)
+Android 9.0 (Pie) - 2GB RAM
+Android 6.0 (Marshmallow)
+Android 9.0 Pie (Go edition)
+Android 7.1.2 (Nougat)
+LG Wearable Platform
+Android 2.3 (Gingerbread)
+Android 2.3.5 (Gingerbread)
+Windows Mobile 6.1 Professional
+Microsoft Windows Mobile 5.0 PocketPC
+Microsoft Windows Mobile 2003 SE Smartphone
+Microsoft Smartphone 2003
+Microsoft Windows PocketPC
+Android 3.0 (Honeycomb)
+Android 1.5 (Cupcake)
+Android 2.0 (Eclair)
+Microsoft PocketPC 2003 SE
+Symbian 7.0
+Microsoft Windows CE.NET
+Android 10 (Go edition)
+KaiOS
+Symbian 9.4
+Microsoft Windows Mobile 5.0 Smartphone
+Microsoft Smartphone 2003 SE OS
+Microsoft Windows Mobile 2003 for PocketPC Phone Edition
+Android 4.4 (KitKat)
+Android 4.3 (Jelly Bean)
+Palm 5.4
+Android 4.1 (Jelly Bean)
+Microsoft Windows Mobile 2003 Smartphone
+Microsoft Windows Mobile 2002 PocketPC
+Microsoft Windows 2002 Smartphone
+Microsoft Smartphone 2003 SE
+Android 5.0 (Lollipop)
+Android 2.1 (Eclair)
+Symbian 7.0s
+Palm 5.2
+Palm 5.2.1
+Symbian
+Proprietary OS
+Microsoft Windows CE 3.0 for PocketPC
+Android 7.0 (Nougat)
+Android 2.2 (Froyo)
+Android 9.0 Pie
+Android 8.0 Oreo (Go edition)
+Proprietary wearable platform
+Android 9.1 Pie (Go edition)
+Android 7.1.1 (Nougat)
