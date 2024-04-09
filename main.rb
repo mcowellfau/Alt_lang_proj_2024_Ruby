@@ -1,6 +1,7 @@
-# Requires the Ruby CSV library for parsing CSV files
+# Required the Ruby CSV library for parsing CSV files
 require 'csv'
-
+# Required for running unit tests
+require 'minitest/autorun'
 # Defines a class named Cell to represent a cell phone with various attributes
 class Cell
     # Creates getter and setter methods for each cell phone attribute using the correct naming convention
@@ -8,7 +9,7 @@ class Cell
                   :body_dimensions, :body_weight, :body_sim, :display_type,
                   :display_size, :display_resolution, :features_sensors, :platform_os
 
-    # Initializes a new instance of the Cell class, setting the attributes with the values provided
+    # Initializes a new instance of the Cell class
     def initialize(oem, model, launch_announced, launch_status,
                    body_dimensions, body_weight, body_sim, display_type,
                    display_size, display_resolution, features_sensors, platform_os)
@@ -286,100 +287,176 @@ def search_by_oem(file_path, oem_to_search, output_file_path)
 end
 
 
-#Display a menu and process user input
-loop do
-  puts "\nMenu Options:"
-  puts "1. View unique OEMs and Models in a .txt out file"
-  puts "2. View unique Feature Sensors and Platform OS in a .txt out file" 
-  puts "3. View the oem with the highest average weight of phone body"
-  puts "4. View OEMs with different announcement and release phones years"
-  puts "5. View the number of phones with only one feature sensor"
-  puts "6. View the year with the most phone launches (after 1999)"
-  puts "7. Delete a row by model"
-  puts "8. Search and display all data related to an OEM in a .txt file "
-  puts "9. Exit"
+# #Display a menu and process user input
+# loop do
+#   puts "\nMenu Options:"
+#   puts "1. View unique OEMs and Models in a .txt out file"
+#   puts "2. View unique Feature Sensors and Platform OS in a .txt out file" 
+#   puts "3. View the oem with the highest average weight of phone body"
+#   puts "4. View OEMs with different announcement and release phones years"
+#   puts "5. View the number of phones with only one feature sensor"
+#   puts "6. View the year with the most phone launches (after 1999)"
+#   puts "7. Delete a row by model"
+#   puts "8. Search and display all data related to an OEM in a .txt file "
+#   puts "9. Exit"
 
-  print "Enter your choice (1-9): "
-  choice = gets.chomp
+#   print "Enter your choice (1-9): "
+#   choice = gets.chomp
 
-  case choice
-  when "1"
-    # Collect unique 'oem' and 'model' values
-    unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
-    unique_models = csv_data.map(&:model).uniq.compact
+#   case choice
+#   when "1"
+#     # Collect unique 'oem' and 'model' values
+#     unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
+#     unique_models = csv_data.map(&:model).uniq.compact
 
-    # Open a text file for writing
-    File.open('unique_oem_and_models.txt', 'w') do |file|
-      file.puts "Unique OEMs:"
-      unique_oems.each { |oem| file.puts oem }
+#     # Open a text file for writing
+#     File.open('unique_oem_and_models.txt', 'w') do |file|
+#       file.puts "Unique OEMs:"
+#       unique_oems.each { |oem| file.puts oem }
 
-      file.puts "\nUnique Models:"
-      unique_models.each { |model| file.puts model }
-    end
-  when "2"
-    # Extract unique 'features_sensors' values
-    unique_features_sensors = csv_data.map(&:features_sensors).uniq.compact
-    # Extract unique 'platform_os' values
-    unique_platform_os = csv_data.map(&:platform_os).uniq.compact
+#       file.puts "\nUnique Models:"
+#       unique_models.each { |model| file.puts model }
+#     end
+#   when "2"
+#     # Extract unique 'features_sensors' values
+#     unique_features_sensors = csv_data.map(&:features_sensors).uniq.compact
+#     # Extract unique 'platform_os' values
+#     unique_platform_os = csv_data.map(&:platform_os).uniq.compact
 
-    # Define the output file name
-    output_file_name = 'unique_features_and_platforms.txt'
+#     # Define the output file name
+#     output_file_name = 'unique_features_and_platforms.txt'
 
-    # Open a text file for writing the unique values
-    File.open(output_file_name, 'w') do |file|
-      file.puts "Unique Feature Sensors:"
-      unique_features_sensors.each { |feature| file.puts feature }
+#     # Open a text file for writing the unique values
+#     File.open(output_file_name, 'w') do |file|
+#       file.puts "Unique Feature Sensors:"
+#       unique_features_sensors.each { |feature| file.puts feature }
 
-      file.puts "\nUnique Platform OS:"
-      unique_platform_os.each { |os| file.puts os }
-    end
-    puts "Unique Feature Sensors and Platform OS values have been written to #{output_file_name}"
-  when "3"
-    highest_avg_oem, highest_avg_weight = find_highest_average_weight(csv_data)
-    if highest_avg_oem && highest_avg_weight
-      puts "The company (OEM) with the highest average weight of phone body is #{highest_avg_oem} with an average weight of #{highest_avg_weight.round(2)} grams."
-    else
-      puts "Could not determine the OEM with the highest average weight."
-    end
-  when "4"
-    different_years_phones = phones_announced_released_different_years(csv_data)
-    if different_years_phones.empty?
-      puts "No phones were found that were announced in one year and released in another."
-    else
-      puts "Phones announced and released in different years:"
-      different_years_phones.each do |phone|
-        puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
-      end
-    end
-  when "5"
-    number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
-    puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
-  when "6"
-    max_year, max_launches = year_with_most_phones_post_1999(csv_data)
-    if max_year && max_launches
-      puts "The year with the most phone launches (after 1999) is #{max_year} with #{max_launches} launches."
-    else
-      puts "No data available for phone launches after 1999."
-    end
-  when "7"
-    puts "Enter the model you want to delete:"
-    model_to_delete = gets.chomp
-    delete_row_by_model('test_cells.csv', model_to_delete)
-  when "8"
-    # Prompt the user for OEM to search for and directly use it in the function call
-    puts "Enter the OEM you want to search for:"
-    oem_to_search = gets.chomp.strip # .strip removes any leading/trailing whitespace
-    # Directly calling the function with the necessary parameters
-    search_by_oem('cleaned_cells.csv', oem_to_search, 'search_results.txt')
-    puts "Search completed. Results are in 'search_results.txt'."
-  when "9"
-    puts "Exiting..."
-    break # Exit the loop
-  else
-    puts "Invalid choice, please enter 1-9."
-  end
-end
+#       file.puts "\nUnique Platform OS:"
+#       unique_platform_os.each { |os| file.puts os }
+#     end
+#     puts "Unique Feature Sensors and Platform OS values have been written to #{output_file_name}"
+#   when "3"
+#     highest_avg_oem, highest_avg_weight = find_highest_average_weight(csv_data)
+#     if highest_avg_oem && highest_avg_weight
+#       puts "The company (OEM) with the highest average weight of phone body is #{highest_avg_oem} with an average weight of #{highest_avg_weight.round(2)} grams."
+#     else
+#       puts "Could not determine the OEM with the highest average weight."
+#     end
+#   when "4"
+#     different_years_phones = phones_announced_released_different_years(csv_data)
+#     if different_years_phones.empty?
+#       puts "No phones were found that were announced in one year and released in another."
+#     else
+#       puts "Phones announced and released in different years:"
+#       different_years_phones.each do |phone|
+#         puts "OEM: #{phone[:oem]}, Model: #{phone[:model]}, Announced: #{phone[:announced_year]}, Released: #{phone[:release_year]}"
+#       end
+#     end
+#   when "5"
+#     number_of_phones_with_one_sensor = count_phones_with_one_features_sensor(csv_data)
+#     puts "Number of phones with only one feature sensor: #{number_of_phones_with_one_sensor}"
+#   when "6"
+#     max_year, max_launches = year_with_most_phones_post_1999(csv_data)
+#     if max_year && max_launches
+#       puts "The year with the most phone launches (after 1999) is #{max_year} with #{max_launches} launches."
+#     else
+#       puts "No data available for phone launches after 1999."
+#     end
+#   when "7"
+#     puts "Enter the model you want to delete:"
+#     model_to_delete = gets.chomp
+#     delete_row_by_model('test_cells.csv', model_to_delete)
+#   when "8"
+#     # Prompt the user for OEM to search for and directly use it in the function call
+#     puts "Enter the OEM you want to search for:"
+#     oem_to_search = gets.chomp.strip # .strip removes any leading/trailing whitespace
+#     # Directly calling the function with the necessary parameters
+#     search_by_oem('cleaned_cells.csv', oem_to_search, 'search_results.txt')
+#     puts "Search completed. Results are in 'search_results.txt'."
+#   when "9"
+#     puts "Exiting..."
+#     break # Exit the loop
+#   else
+#     puts "Invalid choice, please enter 1-9."
+#   end
+# end
+
+#UNIT TESTS Uncomment to run
+# TEST 1
+#Unit test to check for empty files
+
+# class TestFileNotEmpty < Minitest::Test
+#   def setup
+#     @file_path = 'cells.csv' # Update this to the path of your CSV file (Emptytest.csv to see that it catches a failed test)
+#   end
+#   def test_file_not_empty
+#     assert(File.exist?(@file_path), "File does not exist.")
+#     refute(File.zero?(@file_path), "File is empty.")
+#   end
+# end
+
+# TEST 2 DOES NOT WORK
+# require_relative 'main.rb' 
+
+# class CellDataTypeTest < Minitest::Test
+#   def setup
+#     # Create a sample Cell instance with a variety of data types
+#     @cell = Cell.new(
+#       oem: "Test OEM",
+#       model: "Test Model",
+#       body_dimensions: "100 x 200 x 300",
+#       launch_status: "Released 2020",
+#       body_sim: "Yes",
+#       display_type: "LCD",
+#       display_resolution: "1920x1080",
+#       features_sensors: "Accelerometer, Gyro, Proximity",
+#       platform_os: "Android 10",
+#       display_size: 6.5,  # This should be a float
+#       body_weight: 200.5,  # This should be a float
+#       launch_announced: 2020  # This should be an integer
+#     )
+#   end
+
+#   def test_attribute_data_types
+#     assert_kind_of String, @cell.oem
+#     assert_kind_of String, @cell.model
+#     assert_kind_of String, @cell.body_dimensions
+#     assert_kind_of String, @cell.launch_status
+#     assert_kind_of String, @cell.body_sim
+#     assert_kind_of String, @cell.display_type
+#     assert_kind_of String, @cell.display_resolution
+#     assert_kind_of String, @cell.features_sensors
+#     assert_kind_of String, @cell.platform_os
+
+#     assert_kind_of Float, @cell.display_size
+#     assert_kind_of Float, @cell.body_weight
+
+#     assert_kind_of Integer, @cell.launch_announced
+#   end
+# end
 
 
+#UNIT TEST 3
+# # Test class for unit test
+# class DataCleaner
+#   # Cleans a single value, replacing "-" or empty strings with nil
+#   def self.clean_value(value)
+#     return nil if value.nil? || value.strip.empty? || value.strip == "-"
+#     value.strip
+#   end
+# end
 
+# # Example usage in main.rb
+# # cleaned_data = DataCleaner.clean_value(raw_data)
+
+# require_relative 'main.rb'  # Requires the main.rb file where DataCleaner is defined
+
+# class TestDataCleaner < Minitest::Test
+#   def test_clean_value
+#     assert_nil DataCleaner.clean_value(""), "Empty strings should be replaced with nil"
+#     assert_nil DataCleaner.clean_value("  "), "Whitespace strings should be replaced with nil"
+#     assert_nil DataCleaner.clean_value("-"), "'-' should be replaced with nil"
+#     assert_equal "Valid Data", DataCleaner.clean_value("Valid Data"), "Non-empty strings should remain unchanged"
+#   end
+# end
 
