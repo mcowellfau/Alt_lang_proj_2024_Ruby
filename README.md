@@ -53,8 +53,10 @@ The year 2019 had the most phone launches after 1999 with 304 launches
 ### Notes: <br>
 1. Four of the functions that were put into the menu are related to the Report questions with output shown above.
 2. Not all of the unit tests function as intended but they were created to the best of my ability, I have commented which ones do not work. Additionally, they are organized with the three mentioned in the assignment specifications first, followed by the menu functions I created in order.
+3. In order to verify the unit tests, it is recommended that you comment out the menu spanning lines 302-269
 3. The cleaned_cells.csv file was created as a separate file from the cells.csv provided and can be viewed/downloaded
 4. All functionality has been thoroughly tested and confirmed via replit
 5. For the purpose of unit testing, an additional line has been added to the replit gemfile (gem 'minitest')
-
+6. In order to generate the cleaned file a comment has been left in the section that needs to be uncommented.
+7. txt files generated from various functions can be deleted and regenerated to see the file output
 

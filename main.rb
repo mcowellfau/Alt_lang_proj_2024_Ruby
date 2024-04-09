@@ -299,7 +299,7 @@ def search_by_oem(file_path, oem_to_search, output_file_path)
 end
 
 
-Display a menu and process user input
+# Display a menu and process user input
 loop do
   puts "\nMenu Options:"
   puts "1. View unique OEMs and Models in a .txt out file"
@@ -317,7 +317,7 @@ loop do
 
   case choice
   when "1"
-    output_file_path = 'unique_oem_and_models.txt'  # Define or ask for file path
+    output_file_path = 'unique_oem_and_models.txt' 
     write_unique_oems_and_models_to_file(csv_data, output_file_path)
     puts "Unique OEMs and Models have been written to #{output_file_path}"
   when "2"
