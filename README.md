@@ -54,5 +54,6 @@ The year 2019 had the most phone launches after 1999 with 304 launches
 2. Not all of the unit tests function as intended but they were created to the best of my ability 
 3. The cleaned_cells.csv file was created as a separate file from the cells.csv provided and can be viewed/downloaded
 4. All functionality has been thoroughly tested and confirmed via replit
+5. For the purpose of unit testing, an additional line has been added to the replit gemfile (gem 'minitest')
 
 
