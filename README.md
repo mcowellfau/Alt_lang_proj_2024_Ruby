@@ -29,8 +29,9 @@ Ruby supports unit testing through several libraries, with the most prominent be
 1. CSV<br>
 The CSV library is part of Ruby's standard library and provides a complete interface to handle CSV files. It allows for reading from and writing to CSV files, as well as manipulating CSV data in an easy and intuitive way. We are working with data that is stored in CSV format. The CSV library is a good choice for this task because it's specifically designed to work with CSV files, making it unnecessary to reinvent the wheel for CSV parsing and generation. I used the CSV library to read data from CSV files, filter and transform this data (e.g., searching by OEM, cleaning data), and then output the results to new CSV files or for further processing. This includes operations like reading the cleaned_cells.csv file and appending new rows to it.<br>
 2. Minitest<br>
-Minitest is a testing suite for Ruby that provides a complete suite of testing facilities supporting TDD (Test-Driven Development), BDD (Behavior-Driven Development), mocking, and benchmarking. It's part of Ruby's standard library.
-Unit testing is a necessary part of this assignment, ensuring that my code behaves as expected. Minitest is chosen for its simplicity and integration with Ruby, offering the necessary features without the need for external dependencies. I used Minitest to write unit tests for your data processing functions.
+Minitest is a testing suite for Ruby that provides a complete suite of testing facilities supporting TDD (Test-Driven Development), BDD (Behavior-Driven Development), mocking, and benchmarking. It's part of Ruby's standard library.Unit testing is a necessary part of this assignment, ensuring that my code behaves as expected. Minitest is chosen for its simplicity and integration with Ruby, offering the necessary features without the need for external dependencies. I used Minitest to write unit tests for your data processing functions.
+3. Ostruct<br>
+An OpenStruct (Ostruct) is a data structure, similar to a Hash, that allows the definition of arbitrary attributes with their accompanying values. This is accomplished by using Ruby's metaprogramming to define methods on the class itself. This was necessary for the unit tests that I created to set values necessary for comparison with the test values.
 ### Answer the following questions (and provide a corresponding screen showing output answering them):
 ### What company (oem) has the highest average weight of the phone body?<br>
 The company with the highest average weight of the phone body is Lenovo with an average weight of 292.6 grams
@@ -51,7 +52,7 @@ The year 2019 had the most phone launches after 1999 with 304 launches
 ![alt text](consoleOutput4.png)<br>
 ### Notes: <br>
 1. Four of the functions that were put into the menu are related to the Report questions with output shown above.
-2. Not all of the unit tests function as intended but they were created to the best of my ability 
+2. Not all of the unit tests function as intended but they were created to the best of my ability, I have commented which ones do not work. Additionally, they are organized with the three mentioned in the assignment specifications first, followed by the menu functions I created in order.
 3. The cleaned_cells.csv file was created as a separate file from the cells.csv provided and can be viewed/downloaded
 4. All functionality has been thoroughly tested and confirmed via replit
 5. For the purpose of unit testing, an additional line has been added to the replit gemfile (gem 'minitest')
