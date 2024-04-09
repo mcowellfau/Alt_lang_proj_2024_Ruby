@@ -26,7 +26,11 @@ Unit Testing <br>
 Ruby supports unit testing through several libraries, with the most prominent being RSpec and Minitest. These libraries provide a way to write and run tests for your Ruby code, encouraging test-driven development (TDD) practices. They offer a rich set of assertions to check your code's functionality.
 
 ### List out 3 libraries you used from your programming language (if applicable) and explain what they are, why you chose them and what you used them for.
-
+CSV<br>
+The CSV library is part of Ruby's standard library and provides a complete interface to handle CSV files. It allows for reading from and writing to CSV files, as well as manipulating CSV data in an easy and intuitive way. We are working with data that is stored in CSV format. The CSV library is a good choice for this task because it's specifically designed to work with CSV files, making it unnecessary to reinvent the wheel for CSV parsing and generation. I used the CSV library to read data from CSV files, filter and transform this data (e.g., searching by OEM, cleaning data), and then output the results to new CSV files or for further processing. This includes operations like reading the cleaned_cells.csv file and appending new rows to it.
+2. Minitest<br>
+Minitest is a testing suite for Ruby that provides a complete suite of testing facilities supporting TDD (Test-Driven Development), BDD (Behavior-Driven Development), mocking, and benchmarking. It's part of Ruby's standard library.
+Unit testing is a necessary part of this assignment, ensuring that my code behaves as expected. Minitest is chosen for its simplicity and integration with Ruby, offering the necessary features without the need for external dependencies. I used Minitest to write unit tests for your data processing functions.
 ### Answer the following questions (and provide a corresponding screen showing output answering them):
 ### What company (oem) has the highest average weight of the phone body?<br>
 The company with the highest average weight of the phone body is Lenovo with an average weight of 292.6 grams
