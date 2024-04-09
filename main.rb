@@ -103,7 +103,7 @@ def clean_data(value, column_name)
   end
 end
 
-# Reads data from 'cells.csv', and creates an array of Cell instances, one for each row in the CSV.
+# Reads data from 'cells.csv' and creates an array of Cell instances, one for each row in the CSV.
 csv_data = CSV.read('cells.csv', headers: true).map do |row|
   Cell.new(
     clean_data(row['oem'], 'oem'),
@@ -353,10 +353,8 @@ loop do
     model_to_delete = gets.chomp
     delete_row_by_model('test_cells.csv', model_to_delete)
   when "8"
-    # Prompt the user for OEM to search for and directly use it in the function call
     puts "Enter the OEM you want to search for:"
     oem_to_search = gets.chomp.strip # .strip removes any leading/trailing whitespace
-    # Directly calling the function with the necessary parameters
     search_by_oem('cleaned_cells.csv', oem_to_search, 'search_results.txt')
     puts "Search completed. Results are in 'search_results.txt'."
   when "9"
