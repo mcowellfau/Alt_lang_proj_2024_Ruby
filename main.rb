@@ -103,8 +103,7 @@ def clean_data(value, column_name)
   end
 end
 
-# Reads data from 'cells.csv', assuming headers are present,
-# and creates an array of Cell instances, one for each row in the CSV.
+# Reads data from 'cells.csv', and creates an array of Cell instances, one for each row in the CSV.
 csv_data = CSV.read('cells.csv', headers: true).map do |row|
   Cell.new(
     clean_data(row['oem'], 'oem'),
