@@ -2,6 +2,7 @@
 require 'csv'
 # Required for running unit tests
 require 'minitest/autorun'
+require 'ostruct'
 # Defines a class named Cell to represent a cell phone with various attributes
 class Cell
     # Creates getter and setter methods for each cell phone attribute using the correct naming convention
@@ -148,8 +149,20 @@ end
 #   end
 # end
 
+#FUNCTION 1 writing unique oems and models to a txt file
+def write_unique_oems_and_models_to_file(csv_data, file_path)
+  unique_oems = csv_data.map(&:oem).uniq.compact
+  unique_models = csv_data.map(&:model).uniq.compact
 
+  File.open(file_path, 'w') do |file|
+    file.puts "Unique OEMs:"
+    unique_oems.each { |oem| file.puts oem }
 
+    file.puts "\nUnique Models:"
+    unique_models.each { |model| file.puts model }
+  end
+end
+#FUNCTION
 def find_highest_average_weight(csv_data)
   # Initialize a hash to hold the sum of weights and count of phones for each OEM
   weights_sum_and_count = {}
@@ -305,18 +318,9 @@ end
 
 #   case choice
 #   when "1"
-#     # Collect unique 'oem' and 'model' values
-#     unique_oems = csv_data.map(&:oem).uniq.compact  # .compact removes nil values
-#     unique_models = csv_data.map(&:model).uniq.compact
-
-#     # Open a text file for writing
-#     File.open('unique_oem_and_models.txt', 'w') do |file|
-#       file.puts "Unique OEMs:"
-#       unique_oems.each { |oem| file.puts oem }
-
-#       file.puts "\nUnique Models:"
-#       unique_models.each { |model| file.puts model }
-#     end
+#     output_file_path = 'unique_oem_and_models.txt'  # Define or ask for file path
+#     write_unique_oems_and_models_to_file(csv_data, output_file_path)
+#     puts "Unique OEMs and Models have been written to #{output_file_path}"
 #   when "2"
 #     # Extract unique 'features_sensors' values
 #     unique_features_sensors = csv_data.map(&:features_sensors).uniq.compact
@@ -459,4 +463,40 @@ end
 #     assert_equal "Valid Data", DataCleaner.clean_value("Valid Data"), "Non-empty strings should remain unchanged"
 #   end
 # end
+
+#UNIT TEST 4
+# require_relative 'main'  
+
+# class UniqueOEMsAndModelsTest < Minitest::Test
+#   def setup
+#     @csv_data = [
+#       OpenStruct.new(oem: "OEM1", model: "Model1"),
+#       OpenStruct.new(oem: "OEM2", model: "Model2"),
+#       OpenStruct.new(oem: "OEM1", model: "Model1"),  # Duplicate for testing uniqueness
+#       OpenStruct.new(oem: nil, model: nil)           # nil values for testing .compact
+#     ]
+#     @file_path = 'test_unique_oem_and_models.txt'
+#   end
+
+#   def test_write_unique_oems_and_models
+#     write_unique_oems_and_models_to_file(@csv_data, @file_path)
+
+#     expected_output = [
+#       "Unique OEMs:",
+#       "OEM1",
+#       "OEM2",
+#       "Unique Models:",
+#       "Model1",
+#       "Model2"
+#     ]
+
+#     output = File.readlines(@file_path).map(&:chomp) 
+#     assert_equal expected_output, output, "File contents did not match expected unique OEMs and Models"
+#   end
+
+#   def teardown
+#     File.delete(@file_path) if File.exist?(@file_path)  # Clean up the file after the test
+#   end
+# end
+
 
