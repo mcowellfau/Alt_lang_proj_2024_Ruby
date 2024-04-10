@@ -35,7 +35,7 @@ An OpenStruct (Ostruct) is a data structure, similar to a Hash, that allows the 
 ### Answer the following questions (and provide a corresponding screen showing output answering them):
 ### What company (oem) has the highest average weight of the phone body?<br>
 The company with the highest average weight of the phone body is HP with an average weight of 453.6 grams <br>
-![alt text](consoleOuput1.png) 
+ ![alt text](consoleOutput1.png)
 ### Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.
 <br>There were 4 phones that were announced one year and released another:
 1. OEM: Motorola, Model: One Hyper A:2019 R:2020
