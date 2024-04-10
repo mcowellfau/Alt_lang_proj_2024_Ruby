@@ -120,7 +120,7 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
     clean_data(row['platform_os'], 'platform_os')
   )
 end
-#COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (124-150) TO USE
+#COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (124-150) TO USE (file name is cleaned_cells.csv)
 # New csv file name
 # new_csv_file = 'cleaned_cells.csv'
 
@@ -193,12 +193,10 @@ def find_highest_average_weight(csv_data)
     weights_sum_and_count[cell.oem][:sum] += cell.body_weight
     weights_sum_and_count[cell.oem][:count] += 1
   end
-
   # Calculate the average weight for each OEM
   average_weights = weights_sum_and_count.map do |oem, data|
     [oem, data[:sum] / data[:count].to_f]
   end.to_h
-
   # Find the OEM with the highest average weight
   highest_average = average_weights.max_by { |oem, avg_weight| avg_weight }
 
@@ -324,7 +322,7 @@ loop do
   when "3"
     highest_avg_oem, highest_avg_weight = find_highest_average_weight(csv_data)
     if highest_avg_oem && highest_avg_weight
-      puts "The company (OEM) with the highest average weight of phone body is #{highest_avg_oem} with an average weight of #{highest_avg_weight.round(2)} grams."
+      puts "The company (OEM) with the highest average phone body_weight is #{highest_avg_oem} with an average weight of #{highest_avg_weight.round(2)} grams."
     else
       puts "Could not determine the OEM with the highest average weight."
     end
@@ -367,7 +365,7 @@ end
 
 #UNIT TESTS Uncomment to run
 # TEST 1
-#Unit test to check for empty files
+# Unit test to check for empty files
 
 # class TestFileNotEmpty < Minitest::Test
 #   def setup
@@ -380,7 +378,7 @@ end
 # end
 
 # TEST 2 DOES NOT WORK
-# require_relative 'main.rb' 
+# require_relative 'main' 
 
 # class CellDataTypeTest < Minitest::Test
 #   def setup
