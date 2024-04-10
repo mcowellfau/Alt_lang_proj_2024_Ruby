@@ -34,8 +34,8 @@ Minitest is a testing suite for Ruby that provides a complete suite of testing f
 An OpenStruct (Ostruct) is a data structure, similar to a Hash, that allows the definition of arbitrary attributes with their accompanying values. This is accomplished by using Ruby's metaprogramming to define methods on the class itself. This was necessary for the unit tests that I created to set values necessary for comparison with the test values.
 ### Answer the following questions (and provide a corresponding screen showing output answering them):
 ### What company (oem) has the highest average weight of the phone body?<br>
-The company with the highest average weight of the phone body is Lenovo with an average weight of 292.6 grams
-![alt text](consoleOutput1.png) <br>
+The company with the highest average weight of the phone body is HP with an average weight of 453.6 grams
+![alt text](image.png) <br>
 ### Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.
 <br>There were 4 phones that were announced one year and released another:
 1. OEM: Motorola, Model: One Hyper A:2019 R:2020
