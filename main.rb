@@ -60,7 +60,7 @@ def clean_data(value, column_name)
     end
   when 'body_weight'
     # Use regex to extract the number before 'g' and convert it to a float
-    if match = value.to_s.match(/(\d+)\s*g/)
+    if match = value.to_s.match(/(\d+(\.\d+)?)\s*g/)
       match[1].to_f
     else
       # Return nil if no valid number is found before 'g'
@@ -120,7 +120,7 @@ csv_data = CSV.read('cells.csv', headers: true).map do |row|
     clean_data(row['platform_os'], 'platform_os')
   )
 end
-#COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (124-150) TO USE (file name is cleaned_cells.csv)
+# COMMENTED OUT CLEANED .CSV FILE GENERATION CODE UNCOMMENT LINES (125-149) TO USE (file name is cleaned_cells.csv)
 # New csv file name
 # new_csv_file = 'cleaned_cells.csv'
 
@@ -301,7 +301,7 @@ loop do
   puts "\nMenu Options:"
   puts "1. View unique OEMs and Models in a .txt out file"
   puts "2. View unique Feature Sensors and Platform OS in a .txt out file" 
-  puts "3. View the oem with the highest average weight of phone body"
+  puts "3. View the oem with the highest average phone body_weight"
   puts "4. View OEMs with different announcement and release phones years"
   puts "5. View the number of phones with only one feature sensor"
   puts "6. View the year with the most phone launches (after 1999)"
