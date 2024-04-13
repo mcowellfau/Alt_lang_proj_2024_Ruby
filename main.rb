@@ -5,7 +5,7 @@ require 'minitest/autorun'
 require 'ostruct'
 # Defines a class named Cell to represent a cell phone with various attributes
 class Cell
-    # Creates getter and setter methods for each cell phone attribute using the correct naming convention
+    # Creates getter and setter methods for each cell phone attribute using the correct name
     attr_accessor :oem, :model, :launch_announced, :launch_status,
                   :body_dimensions, :body_weight, :body_sim, :display_type,
                   :display_size, :display_resolution, :features_sensors, :platform_os
