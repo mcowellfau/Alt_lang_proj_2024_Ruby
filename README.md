@@ -1,4 +1,5 @@
 # Alt_lang_proj_2024_Ruby
+By:Matthew Cowell
 ### Which programming language and version did you pick?
 I chose my the latest version of Ruby as my programming language (Ruby + Devkit 3.2.3-1).
 ### Why did you pick this programming language?
